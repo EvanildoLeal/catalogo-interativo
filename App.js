@@ -14,6 +14,7 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
+<<<<<<< HEAD
           <Stack.Screen 
             name="Login" 
             component={LoginScreen} 
@@ -34,9 +35,29 @@ export default function App() {
               },
               headerTintColor: '#fff',
             }}
+=======
+          <Stack.Screen
+            name="Login"
+            component={LoginScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Main"
+            component={TabsNavigator}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Detalhes"
+            component={DetalhesScreen}
+            options={{ title: 'Detalhes do Produto' }}
+>>>>>>> 3abcb335408a95a13cf2b1528fc96e5d5ddca6ee
           />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3abcb335408a95a13cf2b1528fc96e5d5ddca6ee

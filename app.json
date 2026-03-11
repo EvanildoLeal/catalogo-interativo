@@ -7,11 +7,16 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
+<<<<<<< HEAD
       "image": "./assets/splash.png",
+=======
+      "image": "./assets/splash-icon.png",
+>>>>>>> 3abcb335408a95a13cf2b1528fc96e5d5ddca6ee
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
+<<<<<<< HEAD
       "supportsTablet": true,
       "bundleIdentifier": "com.evanildo.catalogointerativo"
     },
@@ -29,5 +34,20 @@
       "expo-build-properties"
     ],
     "sdkVersion": "51.0.0"
+=======
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+>>>>>>> 3abcb335408a95a13cf2b1528fc96e5d5ddca6ee
   }
 }
