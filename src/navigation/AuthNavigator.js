@@ -1,15 +1,20 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import LoginScreen from '../screens/LoginScreen';
-// import RegisterScreen from '../screens/RegisterScreen'; // Se tiver a tela de cadastro
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import LoginScreen from '../screens/LoginScreen';
+import NovaTela from '../screens/NovaTela';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
-export default function AuthNavigator() {
+const AuthNavigator = () => {
     return (
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Login" component={LoginScreen} />
-            {/* <Stack.Screen name="Register" component={RegisterScreen} /> */}
+        <Stack.Navigator
+            screenOptions={{
+                headerShown: false,
+            }}
+        >
+            <Stack.Screen name="Login" component={NovaTela} />
         </Stack.Navigator>
     );
-}
+};
+
+export default AuthNavigator;
