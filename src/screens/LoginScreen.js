@@ -8,53 +8,62 @@ import {
     SafeAreaView,
     KeyboardAvoidingView,
     Platform,
-    StatusBar
+    StatusBar,
+    Dimensions
 } from 'react-native';
 import { useDispatch } from 'react-redux';
-import { login } from './store'; // Ajuste o caminho conforme sua estrutura
-import { Eye, EyeOff, Mail, Lock } from 'lucide-react-native';
+import { login } from '../store/store';
+import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react-native';
 
-const LoginScreen = ({ navigation }) => {
+const { width } = Dimensions.get('window');
+
+const LoginScreen = ({ onLogin }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const dispatch = useDispatch();
 
     const handleLogin = () => {
-        // Simulação de login - aqui você chamaria sua API no futuro
-        if (email && password) {
-            const mockUserData = {
-                name: 'Usuário Exemplo',
-                email: email,
-                id: '12345'
-            };
+        if (email.trim() === '' || password.trim() === '') {
+            return;
+        }
 
-            dispatch(login(mockUserData));
-            // navigation.navigate('Home'); // Descomente quando tiver as rotas
-            console.log('Login realizado com sucesso!');
+        const mockUserData = {
+            name: 'Usuário Teste',
+            email: email,
+            id: '12345'
+        };
+
+        dispatch(login(mockUserData));
+
+        if (onLogin) {
+            onLogin();
         }
     };
 
     return (
         <SafeAreaView style={styles.container}>
-            <StatusBar barStyle="light-content" />
+            <StatusBar barStyle="dark-content" />
             <KeyboardAvoidingView
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                 style={styles.content}
             >
                 <View style={styles.header}>
-                    <Text style={styles.title}>Bem-vindo</Text>
-                    <Text style={styles.subtitle}>Faça login para continuar sua jornada na moda.</Text>
+                    <View style={styles.logoPlaceholder}>
+                        <Text style={styles.logoText}>M</Text>
+                    </View>
+                    <Text style={styles.title}>Bem-vindo de volta</Text>
+                    <Text style={styles.subtitle}>Acesse sua conta para conferir as novas tendências.</Text>
                 </View>
 
                 <View style={styles.form}>
-                    {/* Campo de Email */}
-                    <View style={styles.inputContainer}>
-                        <Mail color="#666" size={20} style={styles.icon} />
+                    <Text style={styles.label}>E-mail</Text>
+                    <View style={styles.inputWrapper}>
+                        <Mail color="#999" size={18} style={styles.icon} />
                         <TextInput
                             style={styles.input}
-                            placeholder="E-mail"
-                            placeholderTextColor="#666"
+                            placeholder="exemplo@email.com"
+                            placeholderTextColor="#BBB"
                             value={email}
                             onChangeText={setEmail}
                             keyboardType="email-address"
@@ -62,22 +71,22 @@ const LoginScreen = ({ navigation }) => {
                         />
                     </View>
 
-                    {/* Campo de Senha */}
-                    <View style={styles.inputContainer}>
-                        <Lock color="#666" size={20} style={styles.icon} />
+                    <Text style={styles.label}>Senha</Text>
+                    <View style={styles.inputWrapper}>
+                        <Lock color="#999" size={18} style={styles.icon} />
                         <TextInput
                             style={styles.input}
-                            placeholder="Senha"
-                            placeholderTextColor="#666"
+                            placeholder="Sua senha secreta"
+                            placeholderTextColor="#BBB"
                             secureTextEntry={!showPassword}
                             value={password}
                             onChangeText={setPassword}
                         />
                         <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
                             {showPassword ? (
-                                <EyeOff color="#666" size={20} />
+                                <EyeOff color="#999" size={18} />
                             ) : (
-                                <Eye color="#666" size={20} />
+                                <Eye color="#999" size={18} />
                             )}
                         </TouchableOpacity>
                     </View>
@@ -88,14 +97,15 @@ const LoginScreen = ({ navigation }) => {
 
                     <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
                         <Text style={styles.loginButtonText}>Entrar</Text>
+                        <ArrowRight color="#FFF" size={20} />
                     </TouchableOpacity>
-                </View>
 
-                <View style={styles.footer}>
-                    <Text style={styles.footerText}>Não tem uma conta? </Text>
-                    <TouchableOpacity onPress={() => console.log('Ir para Cadastro')}>
-                        <Text style={styles.signUpText}>Cadastre-se</Text>
-                    </TouchableOpacity>
+                    <View style={styles.footer}>
+                        <Text style={styles.footerText}>Não tem uma conta? </Text>
+                        <TouchableOpacity>
+                            <Text style={styles.signUpText}>Cadastre-se</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </KeyboardAvoidingView>
         </SafeAreaView>
@@ -105,88 +115,113 @@ const LoginScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#000', // Fundo preto como nos prints
+        backgroundColor: '#FFFFFF'
     },
     content: {
         flex: 1,
-        paddingHorizontal: 30,
-        justifyContent: 'center',
+        paddingHorizontal: 25,
+        justifyContent: 'center'
     },
     header: {
         marginBottom: 40,
+        alignItems: 'flex-start'
+    },
+    logoPlaceholder: {
+        width: 50,
+        height: 50,
+        backgroundColor: '#000',
+        borderRadius: 12,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 20
+    },
+    logoText: {
+        color: '#FFF',
+        fontSize: 24,
+        fontWeight: '900'
     },
     title: {
-        fontSize: 32,
-        fontWeight: 'bold',
-        color: '#fff',
-        marginBottom: 10,
+        fontSize: 28,
+        fontWeight: '800',
+        color: '#1A1A1A',
+        marginBottom: 8
     },
     subtitle: {
-        fontSize: 16,
-        color: '#888',
-        lineHeight: 22,
+        fontSize: 15,
+        color: '#777',
+        lineHeight: 22
     },
     form: {
-        width: '100%',
+        width: '100%'
     },
-    inputContainer: {
+    label: {
+        fontSize: 14,
+        fontWeight: '600',
+        color: '#444',
+        marginBottom: 8,
+        marginLeft: 4
+    },
+    inputWrapper: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#1A1A1A',
-        borderRadius: 12,
+        backgroundColor: '#F8F9FA',
+        borderRadius: 14,
         paddingHorizontal: 15,
-        marginBottom: 20,
-        height: 55,
+        marginBottom: 18,
+        height: 58,
         borderWidth: 1,
-        borderColor: '#333',
+        borderColor: '#EEE'
     },
     icon: {
-        marginRight: 10,
+        marginRight: 12
     },
     input: {
         flex: 1,
-        color: '#fff',
-        fontSize: 16,
+        color: '#1A1A1A',
+        fontSize: 16
     },
     forgotPassword: {
         alignSelf: 'flex-end',
-        marginBottom: 30,
+        marginBottom: 30
     },
     forgotPasswordText: {
-        color: '#999',
+        color: '#666',
         fontSize: 14,
+        fontWeight: '500'
     },
     loginButton: {
-        backgroundColor: '#fff',
-        borderRadius: 12,
-        height: 55,
+        backgroundColor: '#000',
+        borderRadius: 14,
+        height: 58,
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        shadowColor: '#fff',
+        shadowColor: '#000',
         shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.2,
-        shadowRadius: 5,
-        elevation: 8,
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
+        elevation: 3
     },
     loginButtonText: {
-        color: '#000',
-        fontSize: 18,
-        fontWeight: 'bold',
+        color: '#FFF',
+        fontSize: 16,
+        fontWeight: '700',
+        marginRight: 10
     },
     footer: {
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: 40,
+        marginTop: 30
     },
     footerText: {
-        color: '#888',
-        fontSize: 14,
+        color: '#777',
+        fontSize: 14
     },
     signUpText: {
-        color: '#fff',
+        color: '#000',
         fontSize: 14,
-        fontWeight: 'bold',
-    },
+        fontWeight: '700'
+    }
 });
 
 export default LoginScreen;

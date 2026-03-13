@@ -1,98 +1,38 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-<<<<<<< HEAD
-import Icon from '../components/Icon';
-=======
-import Icon from 'react-native-vector-icons/Ionicons';
->>>>>>> 3abcb335408a95a13cf2b1528fc96e5d5ddca6ee
-import ProdutosScreen from '../screens/ProdutosScreen';
-import PerfilScreen from '../screens/PerfilScreen';
+import { Ionicons } from '@expo/vector-icons';
+
+// IMPORTANTE: O caminho '../screens/HomeScreen' sobe um nível (sai de navigation) 
+// e entra na pasta screens para buscar o seu arquivo.
+import HomeScreen from '../screens/HomeScreen';
 
 const Tab = createBottomTabNavigator();
 
-const TabsNavigator = () => {
-<<<<<<< HEAD
+export default function TabsNavigator() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
-          if (route.name === 'Masculino') {
-            iconName = focused ? 'man' : 'man-outline';
-          } else if (route.name === 'Feminino') {
-            iconName = focused ? 'woman' : 'woman-outline';
-          } else if (route.name === 'Perfil') {
-            iconName = focused ? 'person' : 'person-outline';
+          if (route.name === 'Início') {
+            iconName = focused ? 'home' : 'home-outline';
+          } else if (route.name === 'Configurações') {
+            iconName = focused ? 'settings' : 'settings-outline';
           }
 
-          return <Icon name={iconName} size={size} color={color} />;
+          return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: '#007AFF',
+        tabBarActiveTintColor: '#6200ee',
         tabBarInactiveTintColor: 'gray',
-        headerStyle: {
-          backgroundColor: '#007AFF',
-        },
-        headerTintColor: '#fff',
+        headerShown: true, // Define como true se quiser ver o título no topo
       })}
     >
-      <Tab.Screen 
-        name="Masculino" 
-        component={ProdutosScreen} 
-        initialParams={{ genero: 'masculino' }}
-        options={{ title: 'Moda Masculina' }}
-      />
-      <Tab.Screen 
-        name="Feminino" 
-        component={ProdutosScreen} 
-        initialParams={{ genero: 'feminino' }}
-        options={{ title: 'Moda Feminina' }}
-      />
-      <Tab.Screen 
-        name="Perfil" 
-        component={PerfilScreen} 
-        options={{ title: 'Meu Perfil' }}
+      <Tab.Screen
+        name="Início"
+        component={HomeScreen}
+        options={{ title: 'Catálogo de Produtos' }}
       />
     </Tab.Navigator>
   );
-};
-
-export default TabsNavigator;
-=======
-    return (
-        <Tab.Navigator
-            screenOptions={({ route }) => ({
-                tabBarIcon: ({ focused, color, size }) => {
-                    let iconName;
-
-                    if (route.name === 'Masculino') {
-                        iconName = focused ? 'man' : 'man-outline';
-                    } else if (route.name === 'Feminino') {
-                        iconName = focused ? 'woman' : 'woman-outline';
-                    } else if (route.name === 'Perfil') {
-                        iconName = focused ? 'person' : 'person-outline';
-                    }
-
-                    return <Icon name={iconName} size={size} color={color} />;
-                },
-                tabBarActiveTintColor: '#007AFF',
-                tabBarInactiveTintColor: 'gray',
-            })}
-        >
-            <Tab.Screen
-                name="Masculino"
-                component={ProdutosScreen}
-                initialParams={{ genero: 'masculino' }}
-            />
-            <Tab.Screen
-                name="Feminino"
-                component={ProdutosScreen}
-                initialParams={{ genero: 'feminino' }}
-            />
-            <Tab.Screen name="Perfil" component={PerfilScreen} />
-        </Tab.Navigator>
-    );
-};
-
-export default TabsNavigator;
->>>>>>> 3abcb335408a95a13cf2b1528fc96e5d5ddca6ee
+}

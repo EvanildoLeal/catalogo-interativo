@@ -1,6 +1,6 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-// 1. Fatia do Usuário (Login/Perfil)
+// 1. Fatia do Usuário (Gerencia o estado de autenticação)
 const userSlice = createSlice({
     name: 'user',
     initialState: {
@@ -19,7 +19,7 @@ const userSlice = createSlice({
     },
 });
 
-// 2. Fatia dos Produtos (Onde os dados da API serão salvos)
+// 2. Fatia dos Produtos (Gerencia a lista de itens)
 const productsSlice = createSlice({
     name: 'products',
     initialState: {
@@ -42,14 +42,18 @@ const productsSlice = createSlice({
     },
 });
 
-// Exportamos as AÇÕES (isso é o que o productService usa)
+// EXPORTAÇÃO DAS AÇÕES
+// Isso permite que você use: dispatch(login(dados)) nas outras telas
 export const { login, logout } = userSlice.actions;
 export const { setProducts, setLoading, setError } = productsSlice.actions;
 
-// 3. Configuração da Loja (Store)
+// 3. CONFIGURAÇÃO DA LOJA (STORE)
+// O export default aqui facilita o import no App.js
 export const store = configureStore({
     reducer: {
         user: userSlice.reducer,
         products: productsSlice.reducer,
     },
 });
+
+export default store;
