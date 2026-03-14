@@ -10,9 +10,10 @@ const AppNavigator = ({ onLogout }) => {
     <Stack.Navigator>
       <Stack.Screen 
         name="Tabs" 
-        component={TabsNavigator} 
         options={{ headerShown: false }}
-      />
+      >
+        {props => <TabsNavigator {...props} onLogout={onLogout} />}
+      </Stack.Screen>
       <Stack.Screen 
         name="Detail" 
         component={DetailScreen} 
@@ -22,6 +23,7 @@ const AppNavigator = ({ onLogout }) => {
             backgroundColor: '#6B4EFF',
           },
           headerTintColor: '#fff',
+          headerBackTitle: 'Voltar',
         }}
       />
     </Stack.Navigator>

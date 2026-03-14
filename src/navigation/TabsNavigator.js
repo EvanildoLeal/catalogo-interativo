@@ -2,6 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import { TouchableOpacity, Alert } from 'react-native';
 import ProductsScreen from '../screens/ProductsScreen';
 
 const Tab = createBottomTabNavigator();
@@ -80,7 +81,24 @@ function FemininoTabs() {
 }
 
 // Navegação principal por abas inferiores
-const TabsNavigator = () => {
+const TabsNavigator = ({ navigation }) => {
+  const handleLogout = () => {
+    Alert.alert(
+      'Sair',
+      'Tem certeza que deseja sair?',
+      [
+        { text: 'Cancelar', style: 'cancel' },
+        { 
+          text: 'Sair', 
+          onPress: () => {
+            navigation.replace('Login');
+          },
+          style: 'destructive'
+        },
+      ]
+    );
+  };
+
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -104,6 +122,11 @@ const TabsNavigator = () => {
         headerTitleStyle: {
           fontWeight: 'bold',
         },
+        headerRight: () => (
+          <TouchableOpacity onPress={handleLogout} style={{ marginRight: 15 }}>
+            <Ionicons name="log-out-outline" size={24} color="#fff" />
+          </TouchableOpacity>
+        ),
       })}
     >
       <Tab.Screen 
