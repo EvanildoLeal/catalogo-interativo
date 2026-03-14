@@ -1,10 +1,10 @@
-# Ì≥± Cat√°logo Interativo
+#  Cat√°logo Interativo
 
 Aplicativo mobile desenvolvido em React Native com Expo para cat√°logo de produtos, consumindo a API p√∫blica DummyJSON. O app apresenta produtos organizados por categorias (masculino/feminino) com navega√ß√£o por abas, tela de detalhes e sistema de login simulado.
 
 ---
 
-## Ì≥ã √çndice
+## √çndice
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
@@ -17,7 +17,7 @@ Aplicativo mobile desenvolvido em React Native com Expo para cat√°logo de produt
 
 ---
 
-## ÌæØ Sobre o Projeto
+## Sobre o Projeto
 
 O **Cat√°logo Interativo** √© um aplicativo desenvolvido como trabalho acad√™mico para demonstrar conceitos fundamentais do desenvolvimento mobile com React Native. O objetivo principal √© criar uma experi√™ncia fluida de navega√ß√£o por categorias de produtos, consumindo dados de uma API real e proporcionando uma interface amig√°vel para o usu√°rio.
 
@@ -64,7 +64,7 @@ O app simula um e-commerce, permitindo que o usu√°rio visualize produtos das cat
 
 ---
 
-## Ìª†Ô∏è Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 | Tecnologia | Vers√£o | Finalidade |
 |------------|--------|------------|
@@ -76,7 +76,7 @@ O app simula um e-commerce, permitindo que o usu√°rio visualize produtos das cat
 | React Native Screens | ~3.29.0 | Otimiza√ß√£o de navega√ß√£o |
 | EAS Build | ^7.0.0 | Gera√ß√£o de APK nativo |
 
-### Ì≥° API Utilizada
+###  API Utilizada
 - **DummyJSON** (https://dummyjson.com)
   - Endpoints:
     - `/products/category/{categoria}` - Lista produtos por categoria
@@ -84,7 +84,7 @@ O app simula um e-commerce, permitindo que o usu√°rio visualize produtos das cat
 
 ---
 
-## Ì≥ã Pr√©-requisitos
+## Pr√©-requisitos
 
 Antes de come√ßar, voc√™ precisar√° ter instalado em sua m√°quina:
 
@@ -99,7 +99,7 @@ Para testar no celular:
 
 ---
 
-## Ì∫Ä Instala√ß√£o e Execu√ß√£o
+## Instala√ß√£o e Execu√ß√£o
 
 ### 1. Clone o reposit√≥rio
 ```bash
@@ -151,35 +151,35 @@ catalogo-interativo/
 Ì≥± Demonstra√ß√£o das Telas
 Ì¥ê Tela de Login
 Tela	Descri√ß√£o
-<img src="assets/screenshots/login.jpg" width="250" alt="Tela de Login">	Funcionalidades:
+<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/login.jpg" width="250">	Funcionalidades:
 ‚Ä¢ Campos de username e senha
 ‚Ä¢ Bot√£o para mostrar/ocultar senha
 ‚Ä¢ Valida√ß√£o com Alert
 ‚Ä¢ Header roxo personalizado
 Ì±® Tela Principal - Aba Masculino
 Tela	Descri√ß√£o
-<img src="assets/screenshots/home-masculino.jpg" width="250" alt="Tela Masculino">	Categorias:
-‚Ä¢ Camisas Ì±î
-‚Ä¢ T√™nis Ì±ü
-‚Ä¢ Rel√≥gios ‚åö
-‚Ä¢ Bot√£o de logout Ì∫™
+<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/home-masculino.jpg" width="250">	Categorias:
+‚Ä¢ Camisas
+‚Ä¢ T√™nis
+‚Ä¢ Rel√≥gios
+‚Ä¢ Bot√£o de logout
 Ì±ó Tela Principal - Aba Feminino
 Tela	Descri√ß√£o
-<img src="assets/screenshots/home-feminino.jpg" width="250" alt="Tela Feminino">	Categorias:
-‚Ä¢ Bolsas Ì±ú
-‚Ä¢ Vestidos Ì±ó
-‚Ä¢ J√≥ias Ì≤ç
-‚Ä¢ Sapatos Ì±†
-‚Ä¢ Rel√≥gios ‚åö
+<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/home-feminino.jpg" width="250">	Categorias:
+‚Ä¢ Bolsas
+‚Ä¢ Vestidos
+‚Ä¢ J√≥ias
+‚Ä¢ Sapatos
+‚Ä¢ Rel√≥gios
 Ì±ó Tela de Produtos - Vestidos
 Tela	Descri√ß√£o
-<img src="assets/screenshots/vestidos.jpg" width="250" alt="Tela Vestidos">	Produtos da categoria Vestidos:
+<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/vestidos.jpg" width="250">	Produtos da categoria Vestidos:
 ‚Ä¢ Exibi√ß√£o em grid de 2 colunas
 ‚Ä¢ Pre√ßos com descontos
 ‚Ä¢ Badges de porcentagem
 Ì≥¶ Tela de Produtos - Camisas
 Tela	Descri√ß√£o
-<img src="assets/screenshots/produtos-camisas.jpg" width="250" alt="Tela Camisas">	Produtos exibidos:
+<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/produtos-camisas.jpg" width="250">	Produtos exibidos:
 ‚Ä¢ Blue & Black Check Shirt - R$ 25,39 (15% off)
 ‚Ä¢ Gigabyte Aorus Tshirt - R$ 24,76 (1% off)
 ‚Ä¢ Man Plaid Shirt - R$ 28,17 (20% off)
@@ -258,6 +258,3 @@ Desenvolvido como trabalho acad√™mico para a disciplina de Desenvolvimento Mobil
 Ìø´ Faculdade FECAF | Ì≥Ö Mar√ßo 2026
 
 text
-
----
-
