@@ -1,12 +1,144 @@
-��� Catálogo InterativoAplicativo mobile desenvolvido em React Native com Expo para catálogo de produtos, consumindo a API pública DummyJSON. O app apresenta produtos organizados por categorias com navegação por abas, tela de detalhes e sistema de login simulado.��� ÍndiceSobre o ProjetoFuncionalidadesTecnologias UtilizadasDemonstração das TelasEstrutura do ProjetoInstalação e ExecuçãoDesafios e SoluçõesAutorSobre o ProjetoO Catálogo Interativo é um projeto académico desenvolvido para demonstrar conceitos fundamentais do desenvolvimento mobile. O objetivo principal é criar uma experiência fluída de navegação por categorias de produtos (Masculino/Feminino), consumindo dados reais e proporcionando uma interface amigável.✨ FuncionalidadesTela de Login: Validação de campos, controlo de visibilidade de senha e feedback visual.Navegação por Abas: Separação intuitiva entre departamentos Masculino e Feminino.Consumo de API: Listagem dinâmica de produtos usando Axios e a API DummyJSON.Detalhes do Produto: Galeria de imagens, informações técnicas, preços com desconto e avaliações.Feedback ao Utilizador: Estados de carregamento (Loading), Pull-to-refresh e tratamento de erros com alertas.��� Tecnologias UtilizadasTecnologiaFinalidadeReact Native / ExpoFramework e plataforma principalAxiosCliente HTTP para requisições à APILucide React / Expo IconsÍcones da interfaceEAS BuildFerramenta para geração de APK nativo��� Demonstração das TelasAbaixo, pode conferir a interface do aplicativo. (Nota: Certifique-se de que os ficheiros existem na pasta assets/screenshots/ no seu repositório)LoginHome MasculinoHome Feminino<img src="assets/screenshots/login.jpg" width="200" alt="Login"><img src="assets/screenshots/home-masculino.jpg" width="200" alt="Home Masculino"><img src="assets/screenshots/home-feminino.jpg" width="200" alt="Home Feminino">Detalhes (Vestidos)Lista (Camisas)<img src="assets/screenshots/vestidos.jpg" width="200" alt="Vestidos"><img src="assets/screenshots/produtos-camisas.jpg" width="200" alt="Camisas">��� Estrutura do Projetocatalogo-interativo/
+# ��� Catálogo Interativo
+
+Aplicativo mobile desenvolvido em React Native com Expo para catálogo de produtos, consumindo a API pública DummyJSON. O app apresenta produtos organizados por categorias (masculino/feminino) com navegação por abas, tela de detalhes e sistema de login simulado.
+
+---
+
+## ��� Índice
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Demonstração das Telas](#demonstração-das-telas)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Instalação e Execução](#instalação-e-execução)
+- [Desafios e Soluções](#desafios-e-soluções)
+- [Autor](#autor)
+
+---
+
+## ��� Sobre o Projeto
+
+O **Catálogo Interativo** é um projeto acadêmico desenvolvido para demonstrar conceitos fundamentais do desenvolvimento mobile. O objetivo principal é criar uma experiência fluida de navegação por categorias de produtos (Masculino/Feminino), consumindo dados reais e proporcionando uma interface amigável.
+
+---
+
+## ✨ Funcionalidades
+
+### ��� Tela de Login
+- Validação de campos (username e senha obrigatórios)
+- Controle de visibilidade da senha
+- Feedback visual com Alert para erros
+
+### ��� Navegação por Abas
+- Separação intuitiva entre departamentos Masculino e Feminino
+- Categorias específicas para cada gênero
+
+### ��� Consumo de API
+- Listagem dinâmica de produtos usando Axios
+- Integração com a API pública DummyJSON
+
+### ��� Detalhes do Produto
+- Galeria de imagens
+- Informações técnicas, preços com desconto
+- Avaliações e estoque
+
+### ⚡ Feedback ao Usuário
+- Estados de carregamento com ActivityIndicator
+- Pull-to-refresh para atualizar listas
+- Tratamento de erros com Alert
+
+---
+
+## ���️ Tecnologias Utilizadas
+
+| Tecnologia | Finalidade |
+|------------|------------|
+| React Native / Expo | Framework e plataforma principal |
+| Axios | Cliente HTTP para requisições à API |
+| Expo Vector Icons | Ícones da interface |
+| EAS Build | Ferramenta para geração de APK nativo |
+
+### ��� API Utilizada
+- **DummyJSON** (https://dummyjson.com)
+  - `/products/category/{categoria}` - Lista produtos por categoria
+  - `/products/{id}` - Detalhes do produto
+
+---
+
+## ��� Demonstração das Telas
+
+<div align="center">
+
+### ��� Tela de Login
+<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/login.jpg" width="250" alt="Tela de Login">
+
+### ��� Tela Principal - Aba Masculino
+<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/home-masculino.jpg" width="250" alt="Tela Masculino">
+
+### ��� Tela Principal - Aba Feminino
+<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/home-feminino.jpg" width="250" alt="Tela Feminino">
+
+### ��� Tela de Produtos - Vestidos
+<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/vestidos.jpg" width="250" alt="Tela Vestidos">
+
+### ��� Tela de Produtos - Camisas
+<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/produtos-camisas.jpg" width="250" alt="Tela Camisas">
+
+</div>
+
+---
+
+## ��� Estrutura do Projeto
+catalogo-interativo/
 ├── assets/
-│   └── screenshots/         # Prints das telas (Imagens do README)
-├── App.js                  # Componente principal e lógica de navegação
-├── app.json                # Configurações do Expo
-├── package.json            # Dependências e scripts
-└── README.md               # Documentação
-��� Instalação e ExecuçãoClone o repositório:git clone [https://github.com/EvanildoLeal/catalogo-interativo.git](https://github.com/EvanildoLeal/catalogo-interativo.git)
-cd catalogo-interativo
-Instale as dependências:npm install
-Inicie o projeto:npx expo start
-Escaneie o QR Code com a app Expo Go no seu telemóvel.⚡ Desafios e SoluçõesIncompatibilidade SDK: Resolvido utilizando o EAS Build para gerar um APK de preview, contornando limitações de versão do Expo Go.Navegação Customizada: Implementação de um sistema de navegação baseado em estados (useState) para evitar dependências pesadas em um projeto académico leve.��� AutorEvanildo LealDesenvolvido para a disciplina de Mobile Development - Faculdade FECAF (2026)
+│ └── screenshots/ # Prints das telas
+├── App.js # Componente principal
+├── app.json # Configurações do Expo
+├── package.json # Dependências e scripts
+└── README.md # Documentação
+
+---
+
+## ��� Instalação e Execução
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/EvanildoLeal/catalogo-interativo.git
+   cd catalogo-interativo
+Instale as dependências:
+
+bash
+npm install
+Inicie o projeto:
+
+bash
+npx expo start
+��� Gerar APK (opcional)
+bash
+eas build:configure
+eas build -p android --profile preview
+⚡ Desafios e Soluções
+��� Incompatibilidade de SDK
+Problema: O app não rodava no celular devido à versão do SDK ser mais nova que a do Expo Go instalado.
+
+✅ Solução: Utilizei o EAS Build para gerar um APK nativo, contornando as limitações de versão.
+
+��� Navegação Customizada
+Problema: Evitar dependências pesadas em um projeto acadêmico.
+
+✅ Solução: Implementei um sistema de navegação baseado em estados com useState, criando funções navigate, goBack e replace.
+
+��� Tratamento de Erros
+Problema: Gerenciar estados de carregamento e erros de rede.
+
+✅ Solução: Uso de try/catch com ActivityIndicator para loading e Alert para mensagens de erro.
+
+���‍��� Autor
+Evanildo Leal
+https://img.shields.io/badge/GitHub-EvanildoLeal-6B4EFF?style=for-the-badge&logo=github
+��� Email: evanildo@wfxky.onmicrosoft.com
+
+��� Licença
+Este projeto está sob a licença MIT.
+
+<div align="center"> <strong>Desenvolvido para a disciplina de Desenvolvimento Mobile</strong><br> ��� Faculdade FECAF | ��� Março 2026 </div> ```
