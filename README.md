@@ -129,7 +129,7 @@ eas build:configure
 
 # Gere o APK de preview
 eas build -p android --profile preview
-��� Estrutura do Projeto
+��� Estrutura do Projeto
 text
 catalogo-interativo/
 ├── .expo/                  # Configurações do Expo
@@ -148,42 +148,32 @@ catalogo-interativo/
 ├── index.js                # Ponto de entrada
 ├── package.json            # Dependências e scripts
 └── README.md               # Documentação
-��� Demonstração das Telas
-��� Tela de Login
-Tela	Descrição
-<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/login.jpg" width="250">	Funcionalidades:
-• Campos de username e senha
-• Botão para mostrar/ocultar senha
-• Validação com Alert
-• Header roxo personalizado
-��� Tela Principal - Aba Masculino
-Tela	Descrição
-<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/home-masculino.jpg" width="250">	Categorias:
-• Camisas
-• Tênis
-• Relógios
-• Botão de logout
-��� Tela Principal - Aba Feminino
-Tela	Descrição
-<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/home-feminino.jpg" width="250">	Categorias:
-• Bolsas
-• Vestidos
-• Jóias
-• Sapatos
-• Relógios
-��� Tela de Produtos - Vestidos
-Tela	Descrição
-<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/vestidos.jpg" width="250">	Produtos da categoria Vestidos:
-• Exibição em grid de 2 colunas
-• Preços com descontos
-• Badges de porcentagem
-��� Tela de Produtos - Camisas
-Tela	Descrição
-<img src="https://github.com/EvanildoLeal/catalogo-interativo/raw/main/assets/screenshots/produtos-camisas.jpg" width="250">	Produtos exibidos:
-• Blue & Black Check Shirt - R$ 25,39 (15% off)
-• Gigabyte Aorus Tshirt - R$ 24,76 (1% off)
-• Man Plaid Shirt - R$ 28,17 (20% off)
-• Man Short Sleeve - R$ 18,62 (7% off)
+## 📱 Demonstração das Telas
+
+### 🔐 Tela de Login
+| Tela | Descrição |
+|------|-----------|
+| <img src="https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/login.jpg?raw=true" width="250"> | **Funcionalidades:**<br>• Campos de username e senha<br>• Botão para mostrar/ocultar senha<br>• Validação com Alert<br>• Header roxo personalizado |
+
+### 👨 Tela Principal - Aba Masculino
+| Tela | Descrição |
+|------|-----------|
+| <img src="https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/home-masculino.jpg?raw=true" width="250"> | **Categorias:**<br>• Camisas<br>• Tênis<br>• Relógios<br>• Botão de logout |
+
+### 👗 Tela Principal - Aba Feminino
+| Tela | Descrição |
+|------|-----------|
+| <img src="https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/home-feminino.jpg?raw=true" width="250"> | **Categorias:**<br>• Bolsas<br>• Vestidos<br>• Jóias<br>• Sapatos<br>• Relógios |
+
+### 👗 Tela de Produtos - Vestidos
+| Tela | Descrição |
+|------|-----------|
+| <img src="https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/vestidos.jpg?raw=true" width="250"> | **Produtos da categoria Vestidos:**<br>• Exibição em grid de 2 colunas<br>• Preços com descontos<br>• Badges de porcentagem |
+
+### 📦 Tela de Produtos - Camisas
+| Tela | Descrição |
+|------|-----------|
+| <img src="https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/produtos-camisas.jpg?raw=true" width="250"> | **Produtos exibidos:**<br>• Blue & Black Check Shirt - R$ 25,39 (15% off)<br>• Gigabyte Aorus Tshirt - R$ 24,76 (1% off)<br>• Man Plaid Shirt - R$ 28,17 (20% off)<br>• Man Short Sleeve - R$ 18,62 (7% off) |
 ⚡ Desafios e Soluções
 Desafio 1: Incompatibilidade com Expo Go
 Problema: O app não rodava no celular devido à versão do SDK ser mais nova que a do Expo Go instalado.
@@ -223,7 +213,7 @@ const navigation = {
   goBack: () => setCurrentScreen({ screen: 'Home', params: null }),
   replace: (screen) => { if (screen === 'Login') setUser(null); }
 };
-��� Como Testar
+��� Como Testar
 Credenciais de teste (qualquer valor funciona)
 Username: qualquer texto (ex: evanildo.alu.fecaf.com.br)
 
@@ -244,17 +234,17 @@ Clique em um produto para ver detalhes
 
 Use o botão ← para voltar
 
-Clique no ícone ��� para fazer logout
+Clique no ícone ��� para fazer logout
 
-���‍��� Autor
+���‍��� Autor
 Evanildo Leal
 https://img.shields.io/badge/GitHub-EvanildoLeal-6B4EFF?style=for-the-badge&logo=github
-��� Email: evanildo.leal@fecaf.com.br
+��� Email: evanildo@wfxky.onmicrosoft.com
 
-��� Licença
+��� Licença
 Este projeto está sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
 
 Desenvolvido como trabalho acadêmico para a disciplina de Desenvolvimento Mobile
-��� Faculdade FECAF | ��� Março 2026
+��� Faculdade FECAF | ��� Março 2026
 
 text
