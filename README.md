@@ -135,11 +135,17 @@ catalogo-interativo/
 ├── .expo/                  # Configurações do Expo
 ├── assets/                 # Imagens e fontes
 │   └── screenshots/        # Prints das telas
+=======
+��� Catálogo InterativoAplicativo mobile desenvolvido em React Native com Expo para catálogo de produtos, consumindo a API pública DummyJSON.��� ÍndiceSobre o ProjetoFuncionalidadesTecnologias UtilizadasDemonstração das TelasEstrutura do ProjetoInstalação e ExecuçãoAutorSobre o ProjetoO Catálogo Interativo é um projeto acadêmico que simula um e-commerce funcional, permitindo a navegação por categorias, visualização de detalhes técnicos de produtos e simulação de fluxo de autenticação.✨ FuncionalidadesLogin Simulado: Validação de campos e controle de visibilidade de senha.Navegação por Abas: Separação entre departamentos Masculino e Feminino.Consumo de API: Listagem dinâmica usando Axios.Detalhes do Produto: Galeria de imagens, preços com desconto e avaliações.Feedback Visual: Estados de carregamento (Loading) e tratamento de erros.��� Demonstração das TelasAbaixo, você pode conferir as principais telas do aplicativo:LoginHome MasculinoHome Feminino<img src="assets/screenshots/login.jpg" width="250" alt="Tela de Login"><img src="assets/screenshots/home-masculino.jpg" width="250" alt="Home Masculino"><img src="assets/screenshots/home-feminino.jpg" width="250" alt="Home Feminino">Detalhes (Vestidos)Lista (Camisas)<img src="assets/screenshots/vestidos.jpg" width="250" alt="Detalhes de Vestidos"><img src="assets/screenshots/produtos-camisas.jpg" width="250" alt="Lista de Camisas">��� Estrutura do ProjetoPara que as imagens apareçam, a estrutura de pastas deve seguir este padrão:catalogo-interativo/
+├── assets/
+│   └── screenshots/
+>>>>>>> cb8fb7d (minhas alterações)
 │       ├── login.jpg
 │       ├── home-masculino.jpg
 │       ├── home-feminino.jpg
 │       ├── produtos-camisas.jpg
 │       └── vestidos.jpg
+<<<<<<< HEAD
 ├── node_modules/           # Dependências
 ├── .gitignore              # Arquivos ignorados pelo Git
 ├── App.js                   # Componente principal
@@ -248,3 +254,11 @@ Desenvolvido como trabalho acadêmico para a disciplina de Desenvolvimento Mobil
 ��� Faculdade FECAF | ��� Março 2026
 
 text
+=======
+├── App.js
+└── README.md
+��� Tecnologias UtilizadasReact Native / ExpoAxios (Requisições HTTP)Lucide React / Expo Icons (Interface)EAS Build (Distribuição Android)��� Instalação e ExecuçãoClone o repositório:git clone [https://github.com/EvanildoLeal/catalogo-interativo.git](https://github.com/EvanildoLeal/catalogo-interativo.git)
+Instale as dependências:npm install
+Inicie o projeto:npx expo start
+��� AutorEvanildo Leal <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">Desenvolvido para a disciplina de Desenvolvimento Mobile - Faculdade FECAF (2026)
+>>>>>>> cb8fb7d (minhas alterações)
