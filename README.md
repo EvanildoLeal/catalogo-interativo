@@ -153,27 +153,27 @@ catalogo-interativo/
 ### 🔐 Tela de Login
 | Tela | Descrição |
 |------|-----------|
-| <img src="https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/login.jpg?raw=true" width="250"> | **Funcionalidades:**<br>• Campos de username e senha<br>• Botão para mostrar/ocultar senha<br>• Validação com Alert<br>• Header roxo personalizado |
+| ![Tela de Login](https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/login.jpg?raw=true) | **Funcionalidades:**<br>• Campos de username e senha<br>• Botão para mostrar/ocultar senha<br>• Validação com Alert<br>• Header roxo personalizado |
 
 ### 👨 Tela Principal - Aba Masculino
 | Tela | Descrição |
 |------|-----------|
-| <img src="https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/home-masculino.jpg?raw=true" width="250"> | **Categorias:**<br>• Camisas<br>• Tênis<br>• Relógios<br>• Botão de logout |
+| ![Tela Masculino](https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/home-masculino.jpg?raw=true) | **Categorias:**<br>• Camisas<br>• Tênis<br>• Relógios<br>• Botão de logout |
 
 ### 👗 Tela Principal - Aba Feminino
 | Tela | Descrição |
 |------|-----------|
-| <img src="https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/home-feminino.jpg?raw=true" width="250"> | **Categorias:**<br>• Bolsas<br>• Vestidos<br>• Jóias<br>• Sapatos<br>• Relógios |
+| ![Tela Feminino](https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/home-feminino.jpg?raw=true) | **Categorias:**<br>• Bolsas<br>• Vestidos<br>• Jóias<br>• Sapatos<br>• Relógios |
 
 ### 👗 Tela de Produtos - Vestidos
 | Tela | Descrição |
 |------|-----------|
-| <img src="https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/vestidos.jpg?raw=true" width="250"> | **Produtos da categoria Vestidos:**<br>• Exibição em grid de 2 colunas<br>• Preços com descontos<br>• Badges de porcentagem |
+| ![Tela Vestidos](https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/vestidos.jpg?raw=true) | **Produtos da categoria Vestidos:**<br>• Exibição em grid de 2 colunas<br>• Preços com descontos<br>• Badges de porcentagem |
 
 ### 📦 Tela de Produtos - Camisas
 | Tela | Descrição |
 |------|-----------|
-| <img src="https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/produtos-camisas.jpg?raw=true" width="250"> | **Produtos exibidos:**<br>• Blue & Black Check Shirt - R$ 25,39 (15% off)<br>• Gigabyte Aorus Tshirt - R$ 24,76 (1% off)<br>• Man Plaid Shirt - R$ 28,17 (20% off)<br>• Man Short Sleeve - R$ 18,62 (7% off) |
+| ![Tela Camisas](https://github.com/EvanildoLeal/catalogo-interativo/blob/main/assets/screenshots/produtos-camisas.jpg?raw=true) | **Produtos exibidos:**<br>• Blue & Black Check Shirt - R$ 25,39 (15% off)<br>• Gigabyte Aorus Tshirt - R$ 24,76 (1% off)<br>• Man Plaid Shirt - R$ 28,17 (20% off)<br>• Man Short Sleeve - R$ 18,62 (7% off) |
 ⚡ Desafios e Soluções
 Desafio 1: Incompatibilidade com Expo Go
 Problema: O app não rodava no celular devido à versão do SDK ser mais nova que a do Expo Go instalado.
